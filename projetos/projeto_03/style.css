@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(10, 10, 53);
+}
+
+.container{
+    padding: 40px;
+    border-radius: 35px;
+    background-color: rgb(32, 24, 104);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    text-align: center;
+}
+.btnFrase{
+    background-color: rgb(3, 3, 134);
+    color: white;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.btnFrase:hover{
+    background-color: rgb(15, 15, 95);
+}
+
