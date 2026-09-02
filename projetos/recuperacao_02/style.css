@@ -1,0 +1,121 @@
+body {
+  background-color: #383939;
+  font-family: Arial;
+}
+
+
+h1 {
+  margin: 25px 0;
+  text-align: center;
+  font-size: 25px;
+}
+
+
+h3 {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+p {
+  margin: 5px;
+  text-align: center;
+  font-size: 8px;
+}
+
+
+.album {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 10px;
+
+
+  background-size: cover;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.card {
+  width: 70px;
+  padding: 4px;
+  background-color: white;
+  text-align: center;
+
+
+ 
+  border: 2px solid transparent;
+  box-sizing: border-box;
+
+
+
+
+  cursor: pointer;
+}
+
+
+
+
+.card.selecionado {
+  border: 2px solid green;
+}
+
+
+.card img {
+  width: 62px;
+  height: 62px;
+  background-size: cover;
+}
+
+
+.card span {
+  display: block;
+  margin-top: 5px;
+  font-size: 7px;
+}
+
+
+.mae {
+  background-image: url("./assets-rec/background.png");
+  background-repeat: no-repeat;
+  width: 370px;
+  margin: 70px auto;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+
+@media (max-width: 600px) {
+  .mae {
+    width: 100%;
+    padding: 40px 10px;
+    box-sizing: border-box;
+  }
+
+
+  .album {
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+  }
+
+
+  h1 {
+    font-size: 25px;
+  }
+
+
+  h3 {
+    font-size: 16px;
+  }
+
+
+  p {
+    font-size: 8px;
+  }
+}
