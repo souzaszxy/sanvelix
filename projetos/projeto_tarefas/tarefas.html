@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Sistema de Tarefas</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f9; }
+        #app { max-width: 300px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        input { width: 70%; padding: 5px; }
+        button { padding: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+
+<div id="app">
+    <h3>Minhas Tarefas</h3>
+    <input type="text" id="tarefa" placeholder="Nova tarefa...">
+    <button onclick="adicionar()">Add</button>
+    <ul id="lista"></ul>
+</div>
+
+
+<script>
+    function adicionar() {
+        let input = document.getElementById('tarefa');
+        let lista = document.getElementById('lista');
+        if (input.value !== "") {
+            let li = document.createElement('li');
+            li.textContent = input.value;
+            lista.appendChild(li);
+            input.value = "";
+        }
+    }
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

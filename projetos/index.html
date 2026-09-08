@@ -1,0 +1,1202 @@
+<title>Portfólio | Sandro Souza</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0f172a;
+        color: #f8fafc;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(15, 23, 42, 0.97);
+        border-bottom: 1px solid #334155;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 18px 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #38bdf8;
+        white-space: nowrap;
+    }
+
+    nav ul {
+        list-style: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    nav a {
+        color: #f8fafc;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #38bdf8;
+    }
+
+    /* =========================
+       INÍCIO
+    ========================= */
+
+    .hero {
+        min-height: 90vh;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        padding: 60px 20px;
+
+        background:
+            radial-gradient(
+                circle at top right,
+                #164e63 0%,
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at bottom left,
+                #1e3a8a 0%,
+                transparent 35%
+            ),
+            #0f172a;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 8vw, 80px);
+        margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+        color: #38bdf8;
+    }
+
+    .hero h2 {
+        font-size: clamp(22px, 5vw, 32px);
+        color: #cbd5e1;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        max-width: 700px;
+        margin: 0 auto 30px;
+
+        font-size: 18px;
+        color: #94a3b8;
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .botao {
+        display: inline-block;
+
+        min-width: 180px;
+        padding: 14px 25px;
+
+        border-radius: 8px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .botao-principal {
+        background: #38bdf8;
+        color: #082f49;
+    }
+
+    .botao-principal:hover {
+        background: #7dd3fc;
+        transform: translateY(-3px);
+    }
+
+    .botao-secundario {
+        border: 1px solid #38bdf8;
+        color: #38bdf8;
+    }
+
+    .botao-secundario:hover {
+        background: #38bdf8;
+        color: #082f49;
+    }
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    section {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 20px;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .titulo h2 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .titulo p {
+        color: #94a3b8;
+    }
+
+    /* =========================
+       SOBRE
+    ========================= */
+
+    .sobre {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+
+        text-align: center;
+
+        color: #cbd5e1;
+        font-size: 18px;
+    }
+
+    /* =========================
+       PROJETOS
+    ========================= */
+
+    .projetos {
+        width: 100%;
+        max-width: none;
+        background: #111827;
+    }
+
+    .projetos-container {
+        width: 100%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 80px 20px;
+    }
+
+    .grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(auto-fit, minmax(230px, 1fr));
+
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+
+        background: #1e293b;
+
+        border: 1px solid #334155;
+        border-radius: 12px;
+
+        padding: 25px;
+
+        text-align: center;
+
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-7px);
+
+        border-color: #38bdf8;
+
+        box-shadow:
+            0 10px 30px
+            rgba(56, 189, 248, 0.12);
+    }
+
+    .card .numero {
+        color: #38bdf8;
+
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .card h3 {
+        margin: 10px 0;
+        font-size: 21px;
+    }
+
+    .card p {
+        color: #94a3b8;
+
+        font-size: 14px;
+
+        margin-bottom: 20px;
+    }
+
+    .card a {
+        display: inline-block;
+
+        padding: 10px 18px;
+
+        border: 1px solid #38bdf8;
+        border-radius: 6px;
+
+        color: #38bdf8;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    .card a:hover {
+        background: #38bdf8;
+        color: #082f49;
+    }
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contato {
+        text-align: center;
+    }
+
+    .contato p {
+        color: #94a3b8;
+        margin-bottom: 20px;
+    }
+
+    /* =========================
+       RODAPÉ
+    ========================= */
+
+    footer {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 30px 20px;
+
+        background: #020617;
+
+        color: #64748b;
+
+        border-top: 1px solid #1e293b;
+    }
+
+    footer strong {
+        color: #38bdf8;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        nav {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        nav ul {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero {
+            min-height: 80vh;
+        }
+
+        .grid {
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 600px) {
+
+        header {
+            position: relative;
+        }
+
+        nav {
+            padding: 15px 10px;
+        }
+
+        .logo {
+            font-size: 22px;
+        }
+
+        nav ul {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 8px;
+        }
+
+        nav li {
+            width: 100%;
+        }
+
+        nav a {
+            display: block;
+
+            width: 100%;
+
+            padding: 10px;
+
+            text-align: center;
+
+            background: #1e293b;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+        }
+
+        .hero {
+            min-height: auto;
+
+            padding:
+                80px
+                15px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        .botoes {
+            flex-direction: column;
+
+            width: 100%;
+        }
+
+        .botao {
+            width: 100%;
+            max-width: 300px;
+
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 15px;
+        }
+
+        .projetos-container {
+            padding: 60px 15px;
+        }
+
+        .titulo h2 {
+            font-size: 32px;
+        }
+
+        .sobre {
+            font-size: 16px;
+        }
+
+        /* UM CARD POR LINHA NO CELULAR */
+
+        .grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .card {
+            padding: 25px 20px;
+        }
+
+        .card a {
+            width: 100%;
+        }
+    }
+
+    /* CELULARES PEQUENOS */
+
+    @media (max-width: 380px) {
+
+        .hero h1 {
+            font-size: 36px;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+        }
+
+        nav ul {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+            Sandro Souza
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#inicio">
+                    Início
+                </a>
+            </li>
+
+            <li>
+                <a href="#sobre">
+                    Sobre
+                </a>
+            </li>
+
+            <li>
+                <a href="#projetos">
+                    Projetos
+                </a>
+            </li>
+
+            <li>
+                <a href="#contato">
+                    Contato
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     INÍCIO
+========================= -->
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="hero-content">
+
+        <h1>
+            Olá, eu sou
+            <span>Sandro</span>
+        </h1>
+
+        <h2>
+            Desenvolvedor Web
+        </h2>
+
+        <p>
+            Bem-vindo ao meu portfólio!
+            Aqui você pode conhecer alguns
+            dos projetos que desenvolvi durante
+            meus estudos e minha jornada na
+            programação.
+        </p>
+
+        <div class="botoes">
+
+            <a
+                href="#projetos"
+                class="botao botao-principal"
+            >
+                Ver meus projetos
+            </a>
+
+            <a
+                href="#contato"
+                class="botao botao-secundario"
+            >
+                Entre em contato
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE
+========================= -->
+
+<section id="sobre">
+
+    <div class="titulo">
+
+        <h2>
+            Sobre mim
+        </h2>
+
+        <p>
+            Conheça um pouco mais
+            sobre o meu trabalho
+        </p>
+
+    </div>
+
+    <div class="sobre">
+
+        <p>
+
+            Meu nome é
+            <strong>Sandro Souza</strong>
+            e estou desenvolvendo meus
+            conhecimentos na área de
+            programação e desenvolvimento web.
+
+            Este portfólio reúne projetos
+            que criei utilizando HTML,
+            CSS e outras tecnologias,
+            mostrando minha evolução
+            e aprendizado ao longo do tempo.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJETOS
+========================= -->
+
+<div
+    class="projetos"
+    id="projetos"
+>
+
+    <div class="projetos-container">
+
+        <div class="titulo">
+
+            <h2>
+                Meus Projetos
+            </h2>
+
+            <p>
+                Clique em um projeto
+                para acessar a página.
+            </p>
+
+        </div>
+
+
+        <div class="grid">
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 01
+                </span>
+
+                <h3>
+                    Projeto 01
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_01/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 02
+                </span>
+
+                <h3>
+                    Projeto 02
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_02/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 03
+                </span>
+
+                <h3>
+                    Projeto 03
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_03/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 04
+                </span>
+
+                <h3>
+                    Projeto 04
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_04/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 05
+                </span>
+
+                <h3>
+                    Projeto 05
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_05/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    PROJETO 06
+                </span>
+
+                <h3>
+                    Projeto 06
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    durante meus estudos.
+                </p>
+
+                <a href="./projeto_06/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    07
+                </span>
+
+                <h3>
+                    Álbum
+                </h3>
+
+                <p>
+                    Projeto de álbum de imagens.
+                </p>
+
+                <a href="./projeto_album/album.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    08
+                </span>
+
+                <h3>
+                    Background
+                </h3>
+
+                <p>
+                    Projeto trabalhando estilos
+                    e planos de fundo.
+                </p>
+
+                <a href="./projeto_background/background.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    09
+                </span>
+
+                <h3>
+                    Bolo
+                </h3>
+
+                <p>
+                    Projeto de página
+                    sobre bolo.
+                </p>
+
+                <a href="./projeto_bolo/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    10
+                </span>
+
+                <h3>
+                    Botões
+                </h3>
+
+                <p>
+                    Exercícios e exemplos
+                    de botões em HTML e CSS.
+                </p>
+
+                <a href="./projeto_botoes/index.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    11
+                </span>
+
+                <h3>
+                    Coca-Cola
+                </h3>
+
+                <p>
+                    Projeto inspirado na
+                    identidade visual da Coca-Cola.
+                </p>
+
+                <a href="./projeto_cocacola/cocacola.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    12
+                </span>
+
+                <h3>
+                    Currículo
+                </h3>
+
+                <p>
+                    Página de currículo pessoal.
+                </p>
+
+                <a href="./projeto_curriculo/curriculo.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    13
+                </span>
+
+                <h3>
+                    Diário
+                </h3>
+
+                <p>
+                    Projeto de página de diário.
+                </p>
+
+                <a href="./projeto_diario/diário.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    14
+                </span>
+
+                <h3>
+                    Evento
+                </h3>
+
+                <p>
+                    Página para divulgação
+                    de evento.
+                </p>
+
+                <a href="./projeto_evento/evento.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    15
+                </span>
+
+                <h3>
+                    Landing Page
+                </h3>
+
+                <p>
+                    Projeto de uma
+                    landing page.
+                </p>
+
+                <a href="./projeto_landing/landing.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    16
+                </span>
+
+                <h3>
+                    Margin e Padding
+                </h3>
+
+                <p>
+                    Exercícios de espaçamento
+                    utilizando CSS.
+                </p>
+
+                <a href="./projeto_marginpadding/marginpadding.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    17
+                </span>
+
+                <h3>
+                    Meu Site
+                </h3>
+
+                <p>
+                    Projeto de criação
+                    de site pessoal.
+                </p>
+
+                <a href="./projeto_meusite/meusite.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    18
+                </span>
+
+                <h3>
+                    Pikachu
+                </h3>
+
+                <p>
+                    Projeto inspirado
+                    no personagem Pikachu.
+                </p>
+
+                <a href="./projeto_pikachu/pikachu.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    19
+                </span>
+
+                <h3>
+                    Planejador
+                </h3>
+
+                <p>
+                    Projeto de planejamento
+                    e organização.
+                </p>
+
+                <a href="./projeto_planejador/planejador.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    20
+                </span>
+
+                <h3>
+                    Prova
+                </h3>
+
+                <p>
+                    Projeto desenvolvido
+                    como atividade avaliativa.
+                </p>
+
+                <a href="./projeto_prova/prova.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    21
+                </span>
+
+                <h3>
+                    Semáforo
+                </h3>
+
+                <p>
+                    Projeto de simulação
+                    de um semáforo.
+                </p>
+
+                <a href="./projeto_semaforo/semaforo.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <span class="numero">
+                    22
+                </span>
+
+                <h3>
+                    Lista de Tarefas
+                </h3>
+
+                <p>
+                    Projeto para organização
+                    de tarefas.
+                </p>
+
+                <a href="./projeto_tarefas/tarefas.html">
+                    Ver projeto →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     CONTATO
+========================= -->
+
+<section
+    class="contato"
+    id="contato"
+>
+
+    <div class="titulo">
+
+        <h2>
+            Contato
+        </h2>
+
+        <p>
+            Gostou dos meus projetos?
+            Entre em contato comigo.
+        </p>
+
+    </div>
+
+    <a
+        href="mailto:sandrosouzacontatos@gmail.com"
+        class="botao botao-principal"
+    >
+        Enviar e-mail
+    </a>
+
+</section>
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>Sandro Souza</strong>
+        — Portfólio
+    </p>
+
+</footer>

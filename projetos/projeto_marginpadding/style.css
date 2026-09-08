@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(5, 9, 48);
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+header{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-bottom:30px ;
+}
+main{
+    width: 800px;
+    margin: auto;
+}
+.azul{
+    background-color: rgb(3, 42, 59);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.verde{
+    background-color: rgb(13, 56, 94);
+    margin: 30px;
+    padding: 10px;
+}
+.laranja{
+    background-color: rgb(30, 49, 104);
+    margin: 20px;
+padding: 20px;
+}
+footer{
+    text-align: center;
+    margin-top: 40px;
+    color: aliceblue;
+}
+
